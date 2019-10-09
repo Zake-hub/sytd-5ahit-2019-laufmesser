@@ -25,7 +25,7 @@ public abstract class ABranch extends AEntity{
     @NotNull
     private String address;
 
-    @Column(length = 50, nullable = false)
+    @Column(length = 50, nullable = false, unique = true)
     @Size(max = 50)
     @NotNull
     private String name;
