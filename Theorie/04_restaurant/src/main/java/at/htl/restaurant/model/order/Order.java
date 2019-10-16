@@ -24,4 +24,7 @@ public class Order extends AEntity{
     @Column(name = "BESTELLUNGS_ZEITPUNKT", nullable = false)
     private Date orderDate;
 
+    @Column(name = "VERLAUF")
+    private String history;
+
 }

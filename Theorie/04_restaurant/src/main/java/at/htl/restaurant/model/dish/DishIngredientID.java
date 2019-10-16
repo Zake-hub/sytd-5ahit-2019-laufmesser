@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Version;
 import java.io.Serializable;
 
 @Getter
@@ -26,5 +27,6 @@ public class DishIngredientID implements Serializable{
     @ManyToOne
     @JoinColumn(name = "ZUTAT_ID", nullable = false, updatable = false)
     private at.htl.restaurant.model.dish.Ingredient ingredient;
+
 
 }

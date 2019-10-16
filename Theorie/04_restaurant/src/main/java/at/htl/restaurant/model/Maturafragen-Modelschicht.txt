@@ -1,0 +1,17 @@
+-) Warum schreibt man bei AEntity MappedSuperclass über die Klasse?
+Da der Compiler ansonst die AEntity gar nicht behandelt.
+
+-) Welche 2 Methoden gibt es ManyToMany abzubilden?
+Entwerder mit der @ManyToMany Annotation oder mit einer eigens angelegten ID und Zwischentabelle mit min 2 ManyToOne verbindungen
+
+->-)Warum in der ID ManyToOne?
+referenz auf Zwischentabelle -> dort gehen immer ManyToOne verbindungen aus
+
+-) Vererbungsstrategien bei Datenbanken?
+Table per Hirachy
+Table per Class
+Table per Concrete
+
+-) Warum Constraints auf zwei Leveln definieren? und Wie?
+In @Column wird auf die Datenbank definiert
+In zB: @NotNull wird auf Programmebene definiert welche Constraints eingehalten werden

@@ -1,4 +1,6 @@
 package at.htl.domain.core;
 
-public class InvalidRecordException {
+import javax.management.InvalidApplicationException;
+
+public class InvalidRecordException extends RuntimeException {
 }

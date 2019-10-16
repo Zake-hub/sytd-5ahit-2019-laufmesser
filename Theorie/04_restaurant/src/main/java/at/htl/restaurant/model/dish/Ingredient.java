@@ -26,7 +26,7 @@ public class Ingredient extends AEntity{
 
     @NotNull
     @Min(0)
-    @Max(1000)
+    @Max(10000)
     @Column(name = "LAGERBESTAND", nullable = false)
     private Integer storedUnits;
 

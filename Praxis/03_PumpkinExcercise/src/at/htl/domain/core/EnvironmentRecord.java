@@ -1,11 +1,18 @@
 package at.htl.domain.core;
 
+import lombok.Getter;
+
 import java.io.Serializable;
 
 public class EnvironmentRecord implements Serializable {
-    private int humidity;
+    @Getter
+    private Integer dayLightRatio;
 
-    public EnvironmentRecord(int humidity) {
-        this.humidity = humidity;
+    public EnvironmentRecord(Integer dayLightRatio) {
+        if (dayLightRatio < 0 || dayLightRatio > 100)
+            throw new InvalidRecordException();
+        this.dayLightRatio = dayLightRatio;
     }
+
+    public Integer getRainRatio() {return 100 - this.dayLightRatio;}
 }

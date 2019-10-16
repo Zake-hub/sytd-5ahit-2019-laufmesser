@@ -11,6 +11,7 @@ public class RestaurantApplicationTests {
 
     @Test
     public void contextLoads() {
+        System.out.println("hallo welt");
     }
 
 }
