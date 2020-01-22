@@ -1,4 +1,4 @@
-package at.htl.sytd.project_approvement.proucer;
+package at.htl.sytd.project_approvement.producer;
 
 import at.htl.sytd.project_approvement.model.AProject;
 import at.htl.sytd.project_approvement.model.ManagementProject;

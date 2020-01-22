@@ -1,4 +1,4 @@
-package at.htl.sytd.project_approvement.proucer;
+package at.htl.sytd.project_approvement.producer;
 
 import at.htl.sytd.project_approvement.model.AProject;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -34,7 +34,7 @@ public class DirectProducer {
     public void pushToApproved(AProject project)
             throws JsonProcessingException {
         this.pushToExchange(
-                "uni.project.validation",
+                "uni.projects.validation",
                 "approved",
                 project);
     }
@@ -42,7 +42,7 @@ public class DirectProducer {
     public void pushToCanceled(AProject project)
             throws JsonProcessingException {
         this.pushToExchange(
-                "uni.project.validation",
+                "uni.projects.validation",
                 "canceled",
                 project);
     }

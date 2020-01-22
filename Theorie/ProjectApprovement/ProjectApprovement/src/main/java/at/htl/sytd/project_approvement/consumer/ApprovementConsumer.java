@@ -18,14 +18,14 @@ public class ApprovementConsumer {
     @Autowired
     ObjectMapper objectMapper;
 
-    @RabbitListener(queues = "uni.project.approved")
+    @RabbitListener(queues = "uni.projects.approved")
     public void processAccept(String message) throws JsonProcessingException {
         AProject project = objectMapper.readValue(message, AProject.class);
         log.info("Project: " + project.getTitle()
                 + " has been approved " + project.toString());
     }
 
-    @RabbitListener(queues = "uni.project.canceled")
+    @RabbitListener(queues = "uni.projects.canceled")
     public void processCancel(String message) throws JsonProcessingException {
         AProject project = objectMapper.readValue(message, AProject.class);
         log.info("Project: " + project.getTitle()

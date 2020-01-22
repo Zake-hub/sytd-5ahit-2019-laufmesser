@@ -2,7 +2,7 @@ package at.htl.sytd.project_approvement.consumer;
 
 import at.htl.sytd.project_approvement.model.AProject;
 import at.htl.sytd.project_approvement.model.EProjectState;
-import at.htl.sytd.project_approvement.proucer.DirectProducer;
+import at.htl.sytd.project_approvement.producer.DirectProducer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -43,19 +43,19 @@ public class FacilityConsumer {
         }
     }
 
-    @RabbitListener(queues = "uni.project.architecture")
+    @RabbitListener(queues = "uni.projects.architecture")
     public void processArchitecture(String message)
             throws JsonProcessingException {
         this.processProject(objectMapper.readValue(message, AProject.class));
     }
 
-    @RabbitListener(queues = "uni.project.chemistry")
+    @RabbitListener(queues = "uni.projects.chemistry")
     public void processChemistry(String message)
             throws JsonProcessingException {
         this.processProject(objectMapper.readValue(message, AProject.class));
     }
 
-    @RabbitListener(queues = "uni.project.electrotechnics")
+    @RabbitListener(queues = "uni.projects.electrotechnics")
     public void processElectrotechnics(String message)
             throws JsonProcessingException {
         this.processProject(objectMapper.readValue(message, AProject.class));

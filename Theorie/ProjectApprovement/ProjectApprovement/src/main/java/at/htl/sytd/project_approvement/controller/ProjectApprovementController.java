@@ -2,7 +2,7 @@ package at.htl.sytd.project_approvement.controller;
 
 import at.htl.sytd.project_approvement.model.AProject;
 import at.htl.sytd.project_approvement.model.EProjectState;
-import at.htl.sytd.project_approvement.proucer.TopicProducer;
+import at.htl.sytd.project_approvement.producer.TopicProducer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
